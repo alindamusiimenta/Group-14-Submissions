@@ -4,7 +4,7 @@ Name: MAWANDA HAKIM
 Student number: 2500703446
 Branch: member-03-scaling
 Assigned part: Feature scaling
-Pull request: 
+Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/8
 
 # What my part means
 Feature scaling is one stage in the LASSO pipeline. This report explains what the stage receives, what it does, and what it gives to the next stage.
