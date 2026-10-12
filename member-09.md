@@ -4,7 +4,7 @@ Name: SSENABULYA SAMUEL
 Student number: 25/U/24150
 Branch:`SSENABULYA SAMUEL`
 Assigned part: Model evaluation.
-Pull request: Add the real pull-request link after opening it
+Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/9
 
 ## What my part means
 Model evaluation is one stage in the LASSO pipeline. This report explains what the stage receives, what it does, and what it gives to the next stage.
