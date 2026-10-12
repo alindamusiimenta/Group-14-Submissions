@@ -5,7 +5,7 @@
  Registration number: 25/U/08611/PS
  Branch: member-01-data
  Assigned part: Dataset loading
- Pull request: 
+ Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/5
 ## What my part means
 
 This stage is the entry point of the LASSO pipeline. In simple terms, it is where the data is read and organized so that the rest of the project can use it consistently. My role was to make sure the dataset is loaded in a clear structure, with the correct target and feature arrangement, so the subsequent preprocessing and modeling steps do not run into avoidable errors.
