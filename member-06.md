@@ -3,7 +3,7 @@ INDIVIDUAL WEEK 2 REPORT
 Name: BUKENYA IVAN LUBEGA
 Registration number : 25/U/08705/PS
 Student number: 2500708705
-Pull request: 
+Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/7
 
 Assigned part:LASSO cost function and L1 regularization
 Pull request:Add the real pull-request link after opening it
