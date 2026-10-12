@@ -8,7 +8,7 @@ Pull request:https://github.com/alindamusiimenta/Group-14-Submissions/pull/3
 Data preprocessing is one stage in the LASSO pipeline. My part is the validator of this stage. It receives the feature matrix and the target vector, confirms they are well-formed, and either passes them on unchanged or stops the program with a clear error. Later steps (standardizing features, centering the target, coordinate descent) all assume the data has a consistent shape, so this check has to come first.
 
 ## 2. Files changed
-`src/preprocessing.cpp`
+`src/member02_preprocessing.cpp`
 
 ## 3. What I did
 I added the function `check_preprocessing_input(const Matrix& features, const Vector& target)` in the `lasso` namespace. It checks three things:
