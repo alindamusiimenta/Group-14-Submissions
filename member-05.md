@@ -4,7 +4,7 @@
 - Student Number: 2400701442
 - Branch: `member-05-baseline`
 - Assigned Part: Linear Regression Baseline
-- Pull Request: 
+- Pull Request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/2
 
 1. What My Part Means
 
