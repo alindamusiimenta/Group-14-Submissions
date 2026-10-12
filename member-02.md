@@ -3,7 +3,8 @@ Name: Karungi Mary Gorret (member-02)
 Reg No: 25/U/0832
 Branch: preprocessing`
 Assigned part: Data preprocessing (input validation)
-Pull request:
+Pull request:individual report about preprocessing, input validation
+#3
 ## 1. What my part means
 Data preprocessing is one stage in the LASSO pipeline. My part is the validator of this stage. It receives the feature matrix and the target vector, confirms they are well-formed, and either passes them on unchanged or stops the program with a clear error. Later steps (standardizing features, centering the target, coordinate descent) all assume the data has a consistent shape, so this check has to come first.
 
