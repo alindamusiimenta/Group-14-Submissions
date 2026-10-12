@@ -5,7 +5,7 @@
 • Student number:  2500700831
 • Branch: member-10-build-integration
 • Assigned part: Build integration, examples, and tests
-• Pull request: 
+• Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/4
 
 ## My part in the project## 
 My job was to make sure everyone's separate pieces of the LASSO project actually work together. Each member wrote their own source file, such as scaling and the coordinate descent optimizer. My part was to connect those files so they build as one library, and to check that they behave correctly togethers.
