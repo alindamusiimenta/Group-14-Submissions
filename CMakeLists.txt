@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(lasso_regression
-    src/lasso_regression.cpp
+    week3/src/lasso_regression.cpp
     src/member01_data.cpp
     src/member02_preprocessing.cpp
     
@@ -20,7 +20,7 @@ add_library(lasso_regression
     src/member09_evaluation.cpp
     
 )
-target_include_directories(lasso_regression PUBLIC include)
+target_include_directories(lasso_regression PUBLIC include week3/include)
 target_compile_options(lasso_regression PRIVATE -Wall -Wextra -Wpedantic)
 
 add_executable(lasso_week3_demo examples/week3_demo.cpp)

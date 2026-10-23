@@ -35,7 +35,7 @@ In Week 3, I will do a clean build from scratch, review my teammates' pull reque
 
 - Name:KALID ALIAS
 - Student number:25/U/0831
-- Branch:`member-10-build-integration`
+- - Branch: `feature/member-10-integration`
 - Assigned part:  Week 3 integration, tests, and demo
 - Pull request:
 ## What my part means
