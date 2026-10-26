@@ -1,7 +1,7 @@
 # Individual Week 3 Report — Member 8
 
 - **Name:** Mutonyi Jesca Mercy
-- **Student number:** 2500707950 
+- **Student number:** 2500707950
 - **Registration number:** 25/U/07950/PS
 - **Branch:** `member-08-coordinate`
 - **Assigned part:** Coordinate descent review and tuning
@@ -12,7 +12,7 @@ This is the Week 3 continuation of my Week 2 module. The purpose is to add one s
 
 ## Files changed
 
-`examples/member08_tuning.cpp and existing coordinate-descent source`
+`week3/examples/member-08-tuning.cpp` and `week3/src/member08-coordinate.cpp`
 
 ## What I added
 
@@ -36,4 +36,4 @@ Verify the update formula on hand-calculated data and improve convergence report
 
 ## References
 
-The group used the course notes, Robert Tibshirani's paper “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996, and C++ reference material for standard-library functions. 
+The group used the course notes, Robert Tibshirani's paper “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996, and C++ reference material for standard-library functions.
