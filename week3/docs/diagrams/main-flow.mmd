@@ -1,0 +1,14 @@
+flowchart TD
+    A([Start]) --> B[Create or load Dataset]
+    B --> C{Rows valid and finite?}
+    C -- No --> X[Report input error]
+    C -- Yes --> D[Split data using fixed seed]
+    D --> E[Fit scaler on training data]
+    E --> F[Transform training and test features]
+    F --> G[Compare lambda candidates using training cost]
+    G --> H[Fit coordinate-descent model]
+    H --> I[Predict test targets]
+    I --> J[Calculate evaluation metrics]
+    J --> K[Report metrics and selected features]
+    K --> L([End])
+    X --> L
