@@ -2,7 +2,7 @@
 - **Name:** my name is MAWANDA HAKIM
 - **Student number:** 2500703446
 - **Branch:** `member-03-scaling`
-- **Assigned part:** Feature scaling without test leakage
+- **Assigned part https://github.com/alindamusiimenta/Group-14-Submissions/pull/31
 
 ## What my part means
 This is the Week 3 continuation of my Week 2 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
