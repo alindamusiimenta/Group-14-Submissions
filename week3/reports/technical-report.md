@@ -1,11 +1,10 @@
 # LASSO Regression From Scratch in C++ — Week 3 Technical Report
 
-**Student name:** [Insert name]  
-**Student number:** [Insert number]  
-**Course / unit:** [Insert course or unit]  
-**Lecturer:** [Insert lecturer]  
-**Institution:** [Insert institution]  
-**Submission date:** [Insert date]
+**Student name:** MAWANDA HAKIM  
+**Student number:** 2500703446
+**Course / unit:** BCCE 
+**Lecturer:** MR KAKAIRE STEVEN
+**Institution:** MAKERERE
 
 > **Academic integrity note:** Complete the placeholders and confirm that the implementation and explanations are understood by the submitting student or group. The report describes the files present in this archive; it does not claim unrecorded group contributions.
 
