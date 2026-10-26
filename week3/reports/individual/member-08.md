@@ -1,28 +1,39 @@
-Name: Mutonyi Jesca Mercy
-Student number: 2500707950
-Registration number: 25/U/07950/PS
-Branch: `member-08-coordinate`
-Assigned part: Coordinate descent optimization
-Pull request: Add the real pull-request link after opening it
+# Individual Week 3 Report — Member 8
 
-What my part means
-Coordinate descent optimization is one stage in the LASSO regression pipeline. It is the step that learns the coefficients: it updates one coefficient at a time and uses the soft threshold to shrink weak coefficients toward zero.
+- **Name:** Mutonyi Jesca Mercy
+- **Student number:** 2500707950
+- **Registration number:** 25/U/07950/PS
+- **Branch:** `member-08-coordinate`
+- **Assigned part:** Coordinate descent review and tuning
 
-Files changed
-src/member08_coordinate_descent.cpp
+## What my part means
 
-What I did
-I added the first simple optimizer. It starts all coefficients at zero and updates them one at a time using the soft-threshold step. After each full pass it checks how much the coefficients changed, and it stops when the changes become small.
+This is the Week 3 continuation of my Week 2 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
 
-How it fits into the full project
-The output of this part is used by the next part of the pipeline. The trained coefficients go to Member 9's evaluation, which measures the error of the predictions. My loop takes the standardized features from Member 3 and reuses the Week 1 soft_threshold helper.
+## Files changed
 
-Testing
-I compiled the integrated Week 2 sources and ran tests/test_week2.cpp.
+`week3/examples/member-08-tuning.cpp` and `week3/src/member08-coordinate.cpp`
 
-What I will add in Week 3
-I will check the update formula on small hand-calculated examples and test different λ values to see how many coefficients shrink to zero.
+## What I added
+
+I added an example that sends several lambda values through the coordinate-descent trainer. The optimizer still starts coefficients at zero, updates one coordinate at a time, applies soft-thresholding, and stops using its tolerance or maximum-pass rule.
+
+## How it fits into the full pipeline
+
+My part receives data or model results from the previous stage and passes a clear result to the next stage. It must keep the same row order, feature order, `Vector` and `Matrix` types, and error-handling rules used by the rest of the group.
+
+## Testing
+
+I compiled the integrated Week 3 sources and ran `tests/test_week3.cpp`. The expected result is:
+
+```text
+All LASSO Week 3 tests passed.
+```
+
+## Week 4/final plan
+
+Verify the update formula on hand-calculated data and improve convergence reporting.
 
 ## References
 
-The group consulted the course notes and Robert Tibshirani's paper, “Regression Shrinkage and Selection via the Lasso,” Journal of the Royal Statistical Society: Series B\*, 1996. C++ syntax and standard-library behavior were checked with cppreference where needed.
+The group used the course notes, Robert Tibshirani's paper “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996, and C++ reference material for standard-library functions.
