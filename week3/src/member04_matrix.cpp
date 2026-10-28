@@ -1,4 +1,4 @@
-#include "lasso/week2.hpp"
+#include "lasso/lasso_regression.hpp"
 #include <stdexcept> //for std::invalid _argument
 
 namespace lasso {

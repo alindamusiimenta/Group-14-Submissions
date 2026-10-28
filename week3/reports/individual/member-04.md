@@ -27,3 +27,7 @@ Add tests for empty rows, several coefficients, and prediction examples.
 References
 
 The group used the course notes, Robert Tibshirani's paper “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996, and C++ reference material for standard-library functions. 
+
+Use of AI
+
+I used Claude AI assistant to help troubleshoot Git issues including resolving merge conflicts and moving files into correct folders.  
