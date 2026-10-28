@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant Demo as week3_demo
+    participant Split as split_dataset
+    participant Scaler as FittedScaler
+    participant Tune as choose_lambda
+    participant Fit as coordinate_descent
+    participant Eval as evaluate_regression
+    Demo->>Split: data, train fraction, seed
+    Split-->>Demo: train and test datasets
+    Demo->>Scaler: fit_scaler(training features)
+    Scaler-->>Demo: means and standard deviations
+    Demo->>Scaler: transform(train and test features)
+    Scaler-->>Demo: scaled feature matrices
+    Demo->>Tune: training features, target, lambda candidates
+    Tune->>Fit: fit for each candidate
+    Fit-->>Tune: coefficients and training cost
+    Tune-->>Demo: selected lambda
+    Demo->>Fit: fit using selected lambda
+    Fit-->>Demo: coefficients and cost
+    Demo->>Eval: test targets and predictions
+    Eval-->>Demo: MAE, MSE, RMSE, R-squared
