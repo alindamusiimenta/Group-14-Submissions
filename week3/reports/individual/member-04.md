@@ -4,7 +4,7 @@ Name: ASIIMWE MARY
 Student number: 2500700823
 Branch:`member-04-matrix`
 Assigned part:Multiple-row prediction
-Pull request:
+Pull request:https://github.com/alindmusiimenta/Group-14-Submissions/pull40
 
 This is the Week 3 continuation of my Week 2 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
 
