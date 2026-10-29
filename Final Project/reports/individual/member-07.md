@@ -1,4 +1,4 @@
-# Individual Week 3 Report — Member 7
+# Individual Final Report — Member 7
 
 - **Name:** Alinda Larry Musiimenta
 - **Student number:** 2500708684
