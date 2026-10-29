@@ -1,4 +1,4 @@
-[week-01-member-01.md](https://github.com/user-attachments/files/34128999/week-01-member-01.md)[Uploading wee# Week 1 Progress Report — LASSO Regression
+Week 1 Progress Report — LASSO Regression
 
 Report owner: Member 01 (data and CSV foundations)  
 Record note: This report summarizes the supplied Week 1 project files. It is reconstructed from the archive and does not claim a historical date or commit.
