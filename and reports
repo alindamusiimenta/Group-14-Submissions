@@ -1,0 +1,65 @@
+ Final Project/lasso-regression-week-04/.gitignore  |   6 [32m+[m
+ .../lasso-regression-week-04/CHANGELOG.md          |  37 [32m++[m
+ .../lasso-regression-week-04/CMakeLists.txt        |  44 [32m++[m
+ Final Project/lasso-regression-week-04/LICENSE     |   3 [32m+[m
+ Final Project/lasso-regression-week-04/README.md   |  29 [32m+[m
+ .../data/input/member01_training.csv               |   6 [32m+[m
+ .../data/input/member01_week3_training.csv         |   9 [32m+[m
+ .../lasso-regression-week-04/data/output/README.md |   1 [32m+[m
+ .../docs/diagrams/class-diagram.mmd                |  37 [32m++[m
+ .../docs/diagrams/input-process-output.mmd         |   3 [32m+[m
+ .../docs/diagrams/main-flow.mmd                    |  14 [32m+[m
+ .../docs/diagrams/sequence-diagram.mmd             |  21 [32m+[m
+ .../docs/diagrams/system-architecture.mmd          |  12 [32m+[m
+ .../docs/figures/lasso_coefficient_shrinkage.png   | Bin [31m0[m -> [32m109690[m bytes
+ .../docs/figures/lasso_fit_illustration.png        | Bin [31m0[m -> [32m89907[m bytes
+ .../docs/figures/lasso_workflow_colored.png        | Bin [31m0[m -> [32m70530[m bytes
+ .../docs/figures/project_relationships_colored.png | Bin [31m0[m -> [32m82615[m bytes
+ .../figures/real_life_technology_applications.png  | Bin [31m0[m -> [32m2564562[m bytes
+ .../figures/week4_cross_validation_workflow.png    | Bin [31m0[m -> [32m67634[m bytes
+ .../examples/member05_baseline.cpp                 |   9 [32m+[m
+ .../examples/member06_cost.cpp                     |   8 [32m+[m
+ .../examples/member07_soft_threshold.cpp           |  12 [32m+[m
+ .../examples/member08_tuning.cpp                   |   9 [32m+[m
+ .../examples/week2_demo.cpp                        |  16 [32m+[m
+ .../examples/week3_demo.cpp                        |  24 [32m+[m
+ .../examples/week4_demo.cpp                        |  35 [32m++[m
+ .../include/lasso/lasso_regression.hpp             |  44 [32m++[m
+ .../include/lasso/week2.hpp                        |  30 [32m+[m
+ .../include/lasso/week3.hpp                        |  38 [32m++[m
+ .../include/lasso/week4.hpp                        |  17 [32m+[m
+ .../reports/BUILD_AND_TEST_RESULTS.txt             |   7 [32m+[m
+ .../reports/individual/README.md                   |  14 [32m+[m
+ .../reports/individual/member-01.md                |  43 [32m++[m
+ .../reports/individual/member-02.md                |  41 [32m++[m
+ .../reports/individual/member-03.md                |  41 [32m++[m
+ .../reports/individual/member-04.md                |  41 [32m++[m
+ .../reports/individual/member-05.md                |  41 [32m++[m
+ .../reports/individual/member-06.md                |  41 [32m++[m
+ .../reports/individual/member-07.md                |  41 [32m++[m
+ .../reports/individual/member-08.md                |  41 [32m++[m
+ .../reports/individual/member-09.md                |  41 [32m++[m
+ .../reports/individual/member-10.md                |  41 [32m++[m
+ .../reports/musk-technology-appendix.pdf           | 104 [32m++++[m
+ .../reports/technical-report.md                    | 408 [32m++++++++++++[m
+ .../reports/technical-report.pdf                   | 681 [32m+++++++++++++++++++++[m
+ .../lasso-regression-week-04/reports/week-03.md    | 366 [32m+++++++++++[m
+ .../lasso-regression-week-04/reports/week-04.md    |  71 [32m+++[m
+ .../lasso-regression-week-04/reports/week-04.pdf   | 125 [32m++++[m
+ .../src/lasso_regression.cpp                       | 185 [32m++++++[m
+ .../lasso-regression-week-04/src/member01_data.cpp |  29 [32m+[m
+ .../src/member02_preprocessing.cpp                 |  31 [32m+[m
+ .../src/member03_scaling.cpp                       |  67 [32m++[m
+ .../src/member04_matrix.cpp                        |  32 [32m+[m
+ .../lasso-regression-week-04/src/member06_cost.cpp |  27 [32m+[m
+ .../src/member07_soft_threshold.cpp                |  17 [32m+[m
+ .../src/member08_coordinate.cpp                    |  64 [32m++[m
+ .../src/member09_evaluation.cpp                    |  37 [32m++[m
+ .../src/member10_cross_validation.cpp              |  57 [32m++[m
+ .../lasso-regression-week-04/tests/test_week2.cpp  |  24 [32m+[m
+ .../lasso-regression-week-04/tests/test_week3.cpp  |  35 [32m++[m
+ .../lasso-regression-week-04/tests/test_week4.cpp  |  21 [32m+[m
+ week1/reports/week-01-member-01.md                 |   0
+ week3/data/input/sample.csv                        |   0
+ week3/examples/load_csv_demo.cpp                   |   0
+ 64 files changed, 3278 insertions(+)

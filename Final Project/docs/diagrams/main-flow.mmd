@@ -1,0 +1,14 @@
+flowchart TD
+    A([Start]) --> B[Load or create Dataset]
+    B --> C{Rows valid and finite?}
+    C -- No --> X[Report input error]
+    C -- Yes --> D[Create reproducible training and test split]
+    D --> E[Choose lambda with k-fold validation on training rows]
+    E --> F[Fit scaler on training rows only]
+    F --> G[Transform training and test features]
+    G --> H[Fit coordinate-descent LASSO]
+    H --> I[Predict held-out test targets]
+    I --> J[Calculate regression metrics]
+    J --> K[Report metrics and selected features]
+    K --> L([End])
+    X --> L
