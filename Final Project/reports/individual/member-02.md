@@ -1,13 +1,12 @@
-# Individual Week 3 Report: Member 2
+# Individual final report member02
 
 **Name: Karungi Mary Gorret*
 **Reg No:25/U/0832*
 **Branch: member-02-preprocessing*
 **Assigned part: Data preprocessing and finite-value validation*
-**Pull request:*
 
 ## 1. What my part means
-This is the Week 3 continuation of my Week 2 module. In Week 2 I checked that the data has a valid shape. In Week 3 I check that the numbers themselves are usable. A fair LASSO experiment needs this, because one `NaN` or infinity makes means, standard deviations, predictions, and error metrics invalid for the whole dataset.
+This is the Week 4 continuation of my Week 3 module. In Week 2 I checked that the data has a valid shape. In Week 4 I check that the numbers themselves are usable. A fair LASSO experiment needs this, because one `NaN` or infinity makes means, standard deviations, predictions, and error metrics invalid for the whole dataset.
 
 ## 2. Files changed
 `src/member02_preprocessing.cpp` (includes `lasso/week3.hpp`)
@@ -33,6 +32,9 @@ The function stops at the first bad value, so the cost is O(n x p) in the worst 
 2. `check_preprocessing_input` confirms the shape.
 3. `all_finite` confirms the values.
 4. Only then do standardizing, centering, and the LASSO solver run.
+   
+## classes
+classes were not applicable for this part
 
 ## 5. How it fits into the full pipeline
 My part receives the loaded data and gives a clear pass or fail result to the next stage. It keeps the same row order, feature order, `Vector` and `Matrix` types, and error-handling rules as the rest of the group. If `all_finite` returns `false`, the caller must stop or report the problem before any numerical processing starts.
@@ -47,10 +49,7 @@ My part receives the loaded data and gives a clear pass or fail result to the ne
 - `all_finite` returns only `true` or `false`. It does not say which row or column has the bad value.
 - It does not check for an empty matrix or for rows of different lengths. It relies on `check_preprocessing_input` running first.
 
-## 8. Week 4
-Add clearer messages and checks for missing or inconsistent CSV rows, including reporting which row and column was rejected.
-
-## 9. References
+## 8. References
 - Tibshirani, R. (1996). "Regression Shrinkage and Selection via the Lasso." *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
 - Course notes.
 - cppreference.com, for `std::isfinite` and other standard-library functions.
