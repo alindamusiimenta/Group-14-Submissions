@@ -1,4 +1,4 @@
-# Individual Week 4 Report — Member 8
+# Individual Final Report — Member 8
 
 - **Name:** Mutonyi Jesca Mercy
 - **Student number:** 2500707950
