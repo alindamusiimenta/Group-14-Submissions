@@ -33,23 +33,23 @@ The function stops at the first bad value, so the cost is O(n x p) in the worst 
 3. `all_finite` confirms the values.
 4. Only then do standardizing, centering, and the LASSO solver run.
    
-## classes
+## 5. Classes
 classes were not applicable for this part
 
-## 5. How it fits into the full pipeline
+## 6. How it fits into the full pipeline
 My part receives the loaded data and gives a clear pass or fail result to the next stage. It keeps the same row order, feature order, `Vector` and `Matrix` types, and error-handling rules as the rest of the group. If `all_finite` returns `false`, the caller must stop or report the problem before any numerical processing starts.
 
-## 6. Design choices
+## 7. Design choices
 - **Fail early:** bad numbers are caught before they spread through the calculations.
 - **Early exit:** the function returns at the first bad value instead of scanning everything.
 - **Safety:** `const&` parameters avoid copies and accidental changes.
 - **Separation of concerns:** shape checking and value checking are two separate functions that can be tested alone.
 
-## 7. Limitations
+## 8. Limitations
 - `all_finite` returns only `true` or `false`. It does not say which row or column has the bad value.
 - It does not check for an empty matrix or for rows of different lengths. It relies on `check_preprocessing_input` running first.
 
-## 8. References
+## 9. References
 - Tibshirani, R. (1996). "Regression Shrinkage and Selection via the Lasso." *Journal of the Royal Statistical Society: Series B*, 58(1), 267-288.
 - Course notes.
 - cppreference.com, for `std::isfinite` and other standard-library functions.
