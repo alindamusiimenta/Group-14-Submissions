@@ -1,0 +1,7 @@
+Week 4 build verification
+=========================
+Compiler/build: CMake build completed successfully in the current Linux environment.
+Test command: ctest --test-dir build --output-on-failure
+Result: 3/3 tests passed (Week 2, Week 3, Week 4).
+Demo: lasso_week4_demo executed successfully.
+Note: build directory is not included in the ZIP; build locally using README instructions.

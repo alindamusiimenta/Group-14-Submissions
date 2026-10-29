@@ -1,0 +1,12 @@
+flowchart TD
+    A[Dataset / CSV] --> B[Input validation]
+    B --> C[Reproducible train-test split]
+    C --> D[Fit scaler on training features]
+    D --> E[Transform train and test using same scaler]
+    E --> F[Coordinate-descent LASSO]
+    F --> G[Predict test rows]
+    G --> H[MAE, MSE, RMSE, R-squared]
+    F --> I[Selected feature indexes]
+    J[Candidate lambda values] --> K[choose_lambda: training cost comparison]
+    E --> K
+    K --> F
