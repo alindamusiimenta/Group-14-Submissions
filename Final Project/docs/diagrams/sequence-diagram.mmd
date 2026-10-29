@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant Demo as week4_demo
+    participant Split as split_dataset
+    participant Tune as select_lambda_by_cross_validation
+    participant CV as cross_validate_lambda
+    participant Scaler as FittedScaler
+    participant Fit as coordinate_descent
+    participant Eval as evaluate_regression
+    Demo->>Split: dataset, training fraction, seed
+    Split-->>Demo: training and held-out test data
+    Demo->>Tune: training data, candidates, folds, seed
+    Tune->>CV: evaluate each candidate lambda
+    CV->>Scaler: fit using fold training rows only
+    Scaler-->>CV: fold means and deviations
+    CV->>Fit: fit one fold's training rows
+    Fit-->>CV: coefficients and intercept
+    CV-->>Tune: mean validation RMSE per lambda
+    Tune-->>Demo: selected lambda
+    Demo->>Scaler: fit using outer training rows
+    Scaler-->>Demo: saved training statistics
+    Demo->>Fit: fit scaled outer training data
+    Fit-->>Demo: final coefficients and intercept
+    Demo->>Eval: held-out targets and predictions
+    Eval-->>Demo: MAE, MSE, RMSE, R-squared
