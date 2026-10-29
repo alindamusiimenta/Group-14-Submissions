@@ -1,23 +1,33 @@
-# Individual Week 2 Report — Member 4
+# Individual Week 3 Report — Member 4
 
 Name: ASIIMWE MARY
 Student number: 2500700823
 Branch:`member-04-matrix`
-Assigned part: Matrix and vector operations
-Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/6
+Assigned part:Multiple-row prediction
+Pull request:https://github.com/alindmusiimenta/Group-14-Submissions/pull40
 
-Matrix and vector operations is one stage in the LASSO pipeline. This report explains what the stage receives, what it does, and what it gives to the next stage.
+This is the Week 3 continuation of my Week 2 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
 
+Files changed
 
 `src/member04_matrix.cpp`
-I added a small helper that multiplies every matrix row by a vector. For each row it multiplies matching values and adds them. This is the same type of calculation used to create a prediction from feature values and coefficients. The function checks that each row has the correct length.
 
-The output of this part is used by the next part of the pipeline. The group should not treat this module as an isolated program: it must use the same `Vector`, `Matrix`, feature order, target order, and error rules as the other members' modules.
+I added a function that receives many feature rows and one coefficient vector. It calculates one dot product per row and returns all predictions. It also rejects rows whose width does not match the number of coefficients.
 
-I compiled the integrated Week 2 sources and ran `tests/test_week2.cpp`. The expected result is `All LASSO Week 2 tests passed.` I will replace this sentence with the exact command, commit, and test result from my branch before final submission.
+My part receives data or model results from the previous stage and passes a clear result to the next stage. It must keep the same row order, feature order, `Vector` and `Matrix` types, and error-handling rules used by the rest of the group.
 
-I will add more tests with simple values that can be checked by hand.
+I compiled the integrated Week 3 sources and ran `tests/test_week3.cpp`. The expected result is:
 
-## References
+All LASSO Week 3 tests passed.
 
-The group consulted the course notes and Robert Tibshirani's paper, “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996. C++ syntax and standard-library behavior were checked with cppreference where needed. 
+Week 4 final plan
+
+Add tests for empty rows, several coefficients, and prediction examples.
+
+References
+
+The group used the course notes, Robert Tibshirani's paper “Regression Shrinkage and Selection via the Lasso,” *Journal of the Royal Statistical Society: Series B*, 1996, and C++ reference material for standard-library functions. 
+
+Use of AI
+
+I used Claude AI assistant to help troubleshoot Git issues including resolving merge conflicts and moving files into correct folders.  
