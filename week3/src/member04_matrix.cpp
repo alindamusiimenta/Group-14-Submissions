@@ -1,0 +1,34 @@
+#include "lasso/lasso_regression.hpp"
+#include <stdexcept> //for std::invalid _argument
+
+namespace lasso {
+//Computes the matrix - vector product
+Vector multiply_rows(const Matrix& matrix, const Vector& values) {
+    Vector result;
+    //process one row at a time
+    for (const Vector& row : matrix) {
+        //Dot product is only defined when lengths match 
+        if (row.size() != values.size()) throw std::invalid_argument("matrix row and vector must match");
+        //Dot product of this row with values
+        double total = 0.0;
+        for (std::size_t i = 0; i < row.size(); ++i) total += row[i] * values[i];
+        result.push_back(total);// store this row's result
+    }
+    return result;
+}
+} // namespace lasso
+
+// Week 3 continuation: make one prediction for every feature row.
+#include <stdexcept>
+namespace lasso {
+Vector predict_rows(const Matrix& features, const Vector& coefficients, double intercept) {
+    Vector predictions;
+    for (const Vector& row : features) {
+        if (row.size() != coefficients.size()) throw std::invalid_argument("feature width and coefficients must match");
+        double prediction = intercept;
+        for (std::size_t column = 0; column < row.size(); ++column) prediction += row[column] * coefficients[column];
+        predictions.push_back(prediction);
+    }
+    return predictions;
+}
+} // namespace lasso

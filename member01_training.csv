@@ -1,0 +1,12 @@
+# Training dataset for Member 01
+# Target variable: final performance score
+# Features: study_hours, attendance, assignments
+# Each row represents one student record
+
+target,study_hours,attendance,assignments
+
+52,1,60,2
+55,2,65,3
+61,3,70,4
+66,4,80,5
+70,5,90,6
