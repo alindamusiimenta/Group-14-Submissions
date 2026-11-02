@@ -1,0 +1,20 @@
+Final build verification — 2026-10-28
+====================================
+
+Environment: Windows, CMake 4.4.2, Ninja, GCC 16.2.0 (MinGW), C++17.
+
+Commands:
+  cmake -S . -B build
+  cmake --build build
+  ctest --test-dir build --output-on-failure
+  cmake --install build --prefix build/install-check
+
+Result:
+  CMake configuration completed.
+  All library, example, and test targets built successfully.
+  CTest: 4/4 tests passed.
+  CMake install: both libraries, headers, and package configuration installed successfully.
+  Installed-package smoke check: a separate CMake consumer found both exported targets, included both public APIs, and built successfully.
+
+The Week 4, CSV-loading, and linear-regression demos also ran successfully.
+The Week 4 metrics are for the bundled synthetic demonstration data only.
