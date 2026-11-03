@@ -1,4 +1,4 @@
-Individual Week 4 Report — Member 6
+Individual Week 4 Report — Member-06
 
 - Name: BUKENYA IVAN LUBEGA
 - Student number: 2500708705
@@ -8,7 +8,7 @@ Individual Week 4 Report — Member 6
 
 What my part means
 
-This is the Week 3 continuation of my Week 2 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
+This is the Week 4 continuation of my Week 3 module. The purpose is to add one step needed for a fair LASSO experiment rather than writing an unrelated piece of code.
 
 Files changed
 
