@@ -3,7 +3,7 @@ Individual Week 4 Report — Member-06
 - Name: BUKENYA IVAN LUBEGA
 - Student number: 2500708705
 - Branch: `BukenyaIvanL/member-06-cost`
-- Assigned part: LASSO cost and lambda comparison
+- Assigned part: LASSO cost   lambda comparison
 - Pull request: https://github.com/alindamusiimenta/Group-14-Submissions/pull/42#issue-6083021171
 
 What my part means
