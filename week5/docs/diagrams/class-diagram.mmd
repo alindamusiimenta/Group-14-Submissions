@@ -1,0 +1,64 @@
+classDiagram
+    class LinearRegression {
+      -double intercept_
+      -double slope_
+      -bool fitted_
+      +fit_closed_form(vector x, vector y) FitResult
+      +fit_gradient_descent(vector x, vector y, rate, iterations) FitResult
+      +fit_stochastic_gradient_descent(vector x, vector y, rate, epochs, seed) FitResult
+      +predict(double x) double const
+      +predict(vector x) vector const
+      +intercept() double const
+      +slope() double const
+    }
+    class FitResult {
+      +double intercept
+      +double slope
+      +double mse
+      +double r_squared
+      +size_t iterations
+    }
+    class DatasetSplit {
+      +vector train_x
+      +vector train_y
+      +vector test_x
+      +vector test_y
+    }
+    class Dataset {
+      +Matrix features
+      +Vector target
+    }
+    class ScaledData {
+      +Matrix features
+      +Vector means
+      +Vector standard_deviations
+    }
+    class TrainTestSplit {
+      +Dataset train
+      +Dataset test
+    }
+    class FittedScaler {
+      +Vector means
+      +Vector standard_deviations
+      +transform(Matrix features) Matrix const
+    }
+    class LassoFit {
+      +Vector coefficients
+      +double intercept
+      +double cost
+      +int passes
+    }
+    class RegressionMetrics {
+      +double mae
+      +double mse
+      +double rmse
+      +double r_squared
+    }
+    class CrossValidationResult {
+      +double lambda
+      +double mean_validation_rmse
+      +vector fold_rmse
+    }
+    TrainTestSplit *-- Dataset : stores train and test values
+    note for LinearRegression "Private state demonstrates encapsulation. No protected members or inheritance are implemented."
+    note for CrossValidationResult "No virtual functions, overrides, or runtime polymorphism are implemented."
