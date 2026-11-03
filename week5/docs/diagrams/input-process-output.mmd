@@ -1,0 +1,5 @@
+flowchart LR
+    A[Input: CSV or feature matrix, target, lambda candidates] --> B[Validate and split data]
+    B --> C[Scale training data and cross-validate lambda]
+    C --> D[Fit LASSO and predict held-out rows]
+    D --> E[Output: coefficients, selected features, predictions, and metrics]

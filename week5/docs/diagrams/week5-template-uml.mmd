@@ -1,0 +1,52 @@
+classDiagram
+    class Matrix~T~ {
+        -vector~vector~T~~ values_
+        +rows() size_t
+        +columns() size_t
+        +multiply~U~(vector~U~) vector~double~
+        +transpose() Matrix~T~
+        +to_double() vector~vector~double~~
+    }
+    class NumericDataset~T~ {
+        +Matrix~T~ features
+        +vector~T~ target
+    }
+    class CsvDataProcessor~T~ {
+        +load(path, has_header) NumericDataset~T~
+    }
+    class TypedLinearRegression~InputT,TargetT~ {
+        -LinearRegression model_
+        +fit_closed_form(x, y) FitResult
+        +fit_gradient_descent(x, y) FitResult
+        +predict~PredictionT~(x) double
+    }
+    class LinearRegression {
+        -double intercept_
+        -double slope_
+        -bool fitted_
+        +fit_closed_form(x, y) FitResult
+        +predict(x) double
+    }
+    class TypedLassoRegression~FeatureT,TargetT~ {
+        -LassoFit fit_
+        -bool fitted_
+        +fit(features, target, lambda) LassoFit
+        +predict(features) vector~double~
+    }
+    class LassoFit {
+        +vector~double~ coefficients
+        +double intercept
+        +double cost
+        +int passes
+    }
+    class LassoCore {
+        +coordinate_descent(features, target, lambda) LassoFit
+        +predict_rows(features, coefficients, intercept) vector~double~
+    }
+
+    CsvDataProcessor~T~ ..> NumericDataset~T~ : creates
+    NumericDataset~T~ *-- Matrix~T~ : contains
+    TypedLinearRegression~InputT,TargetT~ *-- LinearRegression : adapts
+    TypedLassoRegression~FeatureT,TargetT~ ..> Matrix~FeatureT~ : accepts
+    TypedLassoRegression~FeatureT,TargetT~ *-- LassoFit : stores result
+    TypedLassoRegression~FeatureT,TargetT~ ..> LassoCore : calls
