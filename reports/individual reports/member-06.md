@@ -5,7 +5,7 @@ Individual Week 2 Report — Member 6
 - Registration number: 25/U/08705/PS
 - Branch: `week2/member-06-cost`
 - Assigned part: LASSO cost function and L1 regularization
-- Pull request: 
+ 
 What my part means
 
 LASSO cost function and L1 regularization is one stage in the LASSO pipeline. This report explains what the stage receives, what it does, and what it gives to the next stage.
