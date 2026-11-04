@@ -1,4 +1,4 @@
-INDIVIDUAL WEEK 2 REPORT
+INDIVIDUAL WEEK 3 REPORT
 
 Name: BUKENYA IVAN LUBEGA
 Registration number : 25/U/08705/PS
@@ -26,7 +26,7 @@ The output of this part is used by the next part of the pipeline.
 
 Testing
 
-I compiled the integrated Week 2 sources and ran tests/test_week2.cpp. The expected result is All LASSO Week 2 tests passed. 
+I compiled the integrated Week 3 sources and ran tests/test_week3.cpp. The expected result is All LASSO Week 3 tests passed. 
 
 References
 The group consulted the course notes and Robert Tibshirani's paper, “Regression Shrinkage and Selection via the Lasso,” Journal of the Royal Statistical Society: Series B, 1996. C++ syntax and standard-library behavior were checked with cppreference where needed.
