@@ -1,34 +1,53 @@
-#include "lasso/lasso_regression.hpp"
-#include <stdexcept> //for std::invalid _argument
+#include "lasso/week3.hpp"
+
+#include <cmath>
+#include <stdexcept>
 
 namespace lasso {
-//Computes the matrix - vector product
+
+// Computes the matrix-vector product, returning one value per row.
 Vector multiply_rows(const Matrix& matrix, const Vector& values) {
     Vector result;
-    //process one row at a time
+    result.reserve(matrix.size());
+
     for (const Vector& row : matrix) {
-        //Dot product is only defined when lengths match
-        if (row.size() != values.size()) throw std::invalid_argument("matrix row and vector must match");
-        //Dot product of this row with values
-        double total = 0.0;
-        for (std::size_t i = 0; i < row.size(); ++i) total += row[i] * values[i];
-        result.push_back(total);// store this row's result
+        if (row.size() != values.size()) {
+            throw std::invalid_argument(
+                "matrix row and vector must have the same size");
+        }
+
+        result.push_back(dot(row, values));
     }
+
     return result;
 }
-} // namespace lasso
 
-// Week 3 continuation: make one prediction for every feature row.
-#include <stdexcept>
-namespace lasso {
-Vector predict_rows(const Matrix& features, const Vector& coefficients, double intercept) {
-    Vector predictions;
-    for (const Vector& row : features) {
-        if (row.size() != coefficients.size()) throw std::invalid_argument("feature width and coefficients must match");
-        double prediction = intercept;
-        for (std::size_t column = 0; column < row.size(); ++column) prediction += row[column] * coefficients[column];
-        predictions.push_back(prediction);
+// Predicts one target value for every feature row.
+Vector predict_rows(const Matrix& features,
+                    const Vector& coefficients,
+                    double intercept) {
+
+    if (features.empty() ||
+        coefficients.empty() ||
+        !std::isfinite(intercept)) {
+        throw std::invalid_argument(
+            "features, coefficients, and intercept must be valid");
     }
+
+    Vector predictions;
+    predictions.reserve(features.size());
+
+    for (const Vector& row : features) {
+        if (row.size() != coefficients.size()) {
+            throw std::invalid_argument(
+                "feature width and coefficient count must match");
+        }
+
+        predictions.push_back(
+            intercept + dot(row, coefficients));
+    }
+
     return predictions;
 }
+
 } // namespace lasso

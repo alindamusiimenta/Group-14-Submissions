@@ -11,6 +11,7 @@
 
 namespace numerics {
 
+// Matrix stores values of one numeric type.
 template <typename T>
 class Matrix {
     static_assert(is_numeric_v<T>,
@@ -22,8 +23,13 @@ public:
 
     Matrix() = default;
 
-    Matrix(std::initializer_list<Row> rows)
-        : values_(rows) {
+    Matrix(std::initializer_list<std::initializer_list<T>> rows) {
+        values_.reserve(rows.size());
+
+        for (const auto& row : rows) {
+            values_.emplace_back(row);
+        }
+
         validate();
     }
 
@@ -37,20 +43,24 @@ public:
         validate();
     }
 
-    std::size_t rows() const {
+    std::size_t rows() const noexcept {
         return values_.size();
     }
 
-    std::size_t columns() const {
-        return columns_;
+    std::size_t columns() const noexcept {
+        return values_.empty() ? 0 : values_[0].size();
+    }
+
+    Row& operator[](std::size_t index) {
+        return values_.at(index);
     }
 
     const Row& operator[](std::size_t index) const {
         return values_.at(index);
     }
 
-    Row& operator[](std::size_t index) {
-        return values_.at(index);
+    const Storage& values() const noexcept {
+        return values_;
     }
 
     template <typename U>
@@ -60,13 +70,10 @@ public:
         static_assert(is_numeric_v<U>,
                       "Weights must be numeric");
 
-        if (weights.size() != columns_) {
+        if (weights.size() != columns()) {
             throw std::invalid_argument(
                 "Matrix columns must match weight count");
         }
-
-        const std::vector<double> double_weights =
-            to_double_vector(weights);
 
         std::vector<double> result;
         result.reserve(rows());
@@ -75,10 +82,10 @@ public:
             double sum = 0.0;
 
             for (std::size_t column = 0;
-                 column < columns_; ++column) {
+                 column < columns(); ++column) {
 
                 sum += numerics::to_double(row[column]) *
-                       double_weights[column];
+                       numerics::to_double(weights[column]);
             }
 
             result.push_back(sum);
@@ -88,15 +95,17 @@ public:
     }
 
     Matrix<T> transpose() const {
-        Storage transposed(
-            columns_, Row(rows()));
+        if (values_.empty()) {
+            return {};
+        }
+
+        Storage transposed(columns(), Row(rows()));
 
         for (std::size_t row = 0; row < rows(); ++row) {
             for (std::size_t column = 0;
-                 column < columns_; ++column) {
+                 column < columns(); ++column) {
 
-                transposed[column][row] =
-                    values_[row][column];
+                transposed[column][row] = values_[row][column];
             }
         }
 
@@ -109,18 +118,16 @@ public:
 
 private:
     Storage values_;
-    std::size_t columns_ = 0;
 
-    void validate() {
+    void validate() const {
         if (values_.empty()) {
-            columns_ = 0;
             return;
         }
 
-        columns_ = values_.front().size();
+        const std::size_t expected_columns = values_[0].size();
 
         for (const Row& row : values_) {
-            if (row.size() != columns_) {
+            if (row.size() != expected_columns) {
                 throw std::invalid_argument(
                     "All matrix rows must have equal sizes");
             }
