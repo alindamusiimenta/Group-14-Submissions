@@ -9,7 +9,6 @@
 I wrote two small yes/no checks on the shape of the data. `rows_match_target` is true when there is at least one row and exactly one target per row. `rows_have_equal_width` is true when every row has the same number of features as the first row. They return true or false and do not throw, so other members can use them in their own error handling. The cost function already uses both.
 
 ## Files
-
 `src/member02_preprocessing.cpp`
 
 ## Why this comes first
