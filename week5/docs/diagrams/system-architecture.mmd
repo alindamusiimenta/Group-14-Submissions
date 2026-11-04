@@ -1,0 +1,10 @@
+flowchart TD
+    A[CSV or in-memory Dataset] --> B[Validate dimensions and finite values]
+    B --> C[Split into training and test rows]
+    C --> D[Cross-validate lambda on training rows]
+    D --> E[Fit scaler on training rows]
+    E --> F[Transform training and test rows with same scaler]
+    F --> G[Fit coordinate-descent LASSO]
+    G --> H[Predict held-out test rows]
+    H --> I[Calculate MAE, MSE, RMSE and R-squared]
+    G --> J[Report selected feature indexes]

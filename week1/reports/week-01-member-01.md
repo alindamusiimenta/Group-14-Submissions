@@ -1,6 +1,7 @@
 **Week 1 Progress Report — LASSO Regression**
 
-Report owner: Member 01 (data and CSV foundations)  
+Report owner: NANTALE PAULINE (data and CSV foundations) 
+Registration number: 25/U/08611/PS
 Record note: This report summarizes the supplied Week 1 project files. It is reconstructed from the archive and does not claim a historical date or commit.
 
 ## Purpose of this week
@@ -45,5 +46,5 @@ Each group member will add their own verified report in `reports/individual/`. T
 
 - Tool: OpenAI Codex.
 - Purpose: Review the supplied Week 1 files and help write this report in the Week 3 format.
-- Reason: To support code review and documentation. Group members should check the report and understand the code before submission.
-k-01-member-01.md…]()
+- Reason: To support code review and documentation. 
+
