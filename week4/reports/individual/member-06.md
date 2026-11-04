@@ -23,7 +23,7 @@ My part receives data or model results from the previous stage and passes a clea
 
 Testing
 
-I compiled the integrated Week 3 sources and ran tests/test_week3.cpp. The expected result is:
+I compiled the integrated Week 4 sources and ran tests/test_week4.cpp. The expected result is:
 
 Before final submission, I will replace this with the exact command, commit hash, and pull-request result from my branch.
 
