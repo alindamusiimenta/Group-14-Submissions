@@ -31,7 +31,7 @@ All LASSO Week 3 tests passed.
 
 Before final submission, I will replace this with the exact command, commit hash, and pull-request result from my branch.
 
-## Week 4/final plan
+## Week 4
 
 Add more tests around the threshold and print feature names as well as indexes.
 
