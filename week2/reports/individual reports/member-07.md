@@ -25,7 +25,7 @@ The output of this part is used by the next part of the pipeline. The group shou
 
 ## Testing
 
-I compiled the integrated Week 2 sources and ran `tests/test_week2.cpp`. The expected result is `All LASSO Week 2 tests passed.` I will replace this sentence with the exact command, commit, and test result from my branch before final submission.
+I compiled the integrated Week 2 sources and ran `tests/test_week2.cpp`. 
 
 ## What I will add in Week 3
 
