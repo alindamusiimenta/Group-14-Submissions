@@ -1,0 +1,197 @@
+ .gitignore                                         |   1 [31m-[m
+ week5/CHANGELOG.md => CHANGELOG.md                 |   0
+ week5/CMakeLists.txt => CMakeLists.txt             |   0
+ "and reports\357\200\242"                          |  65 [31m----[m
+ .../include => include}/lasso/lasso_regression.hpp |   0
+ .../lasso/typed_lasso_regression.hpp               |   0
+ {week5/include => include}/lasso/week2.hpp         |   0
+ {week4/include => include}/lasso/week3.hpp         |   0
+ {week5/include => include}/lasso/week4.hpp         |   0
+ .../linreg/linear_regression.hpp                   |   0
+ .../linreg/typed_linear_regression.hpp             |   0
+ .../numerics/csv_data_processor.hpp                |   0
+ {week5/include => include}/numerics/dataset.hpp    |   0
+ {week5/include => include}/numerics/matrix.hpp     |   0
+ .../include => include}/numerics/numeric_types.hpp |   0
+ .../week1}/reports/individual/member-01.md         |  58 [32m++[m[31m--[m
+ .../week1}/reports/individual/member-02.md         |   0
+ .../week1}/reports/individual/member-04.md         |   0
+ .../week1}/reports/individual/member-06.md         |  58 [32m++[m[31m--[m
+ .../week1}/reports/individual/member-07.md         |   0
+ .../week1}/reports/individual/member-09.md         |   0
+ .../week1}/reports/week-01-member-01.md            | 100 [32m+++[m[31m---[m
+ .../week1}/src/data/input/member01_training.csv    |   0
+ .../week1}/src/member02_preprocessing.cpp          |   0
+ .../week1}/src/member09_evaluation.cpp             |   0
+ {week1 => old format/week1}/tests/test_week1.cpp   |   0
+ .../week2}/.vscode/c_cpp_properties.json           |   0
+ {week2 => old format/week2}/.vscode/launch.json    |   0
+ {week2 => old format/week2}/.vscode/settings.json  |   0
+ .../week2}/examples/member-07-soft-threshold.cpp   |   0
+ .../week2}/examples/week2_demo.cpp                 |   0
+ .../week2}/lasso/lasso_regression.hpp              |   0
+ .../week2}/reports/individual reports/member-01.md |   0
+ .../week2}/reports/individual reports/member-02.md |   0
+ .../week2}/reports/individual reports/member-03.md |   0
+ .../week2}/reports/individual reports/member-04.md |   0
+ .../week2}/reports/individual reports/member-05.md |   0
+ .../week2}/reports/individual reports/member-06.md |   0
+ .../week2}/reports/individual reports/member-07.md |   0
+ .../week2}/reports/individual reports/member-09.md |   0
+ .../week2}/src/lasso_regression.cpp                |   0
+ {week3 => old format/week3}/CMakeLists.txt         |  64 [32m++[m[31m--[m
+ .../week3}/data/input/member01_training.csv        |   0
+ .../week3}/data/input/member01_week3_training.csv  |   0
+ .../week3/data/input/sample.csv                    |   0
+ {week3 => old format/week3}/data/output/.gitkeep   |   0
+ {week3 => old format/week3}/docs/diagrams/.gitkeep |   0
+ .../week3}/docs/diagrams/class-diagram.mmd         |   0
+ .../week3}/docs/diagrams/input-process-output.mmd  |   0
+ .../week3}/docs/diagrams/main-flow.mmd             |   0
+ .../week3}/docs/diagrams/sequence-diagram.mmd      |   0
+ .../week3}/docs/diagrams/system-architecture.mmd   |   0
+ {week3 => old format/week3}/docs/figures/.gitkeep  |   0
+ .../docs/figures/lasso_coefficient_shrinkage.png   | Bin
+ .../week3}/docs/figures/lasso_fit_illustration.png | Bin
+ .../week3}/docs/figures/lasso_workflow_colored.png | Bin
+ .../docs/figures/project_relationships_colored.png | Bin
+ .../week3}/examples/load_csv_demo.cpp              |  30 [32m+[m[31m-[m
+ .../week3}/examples/member-08-tuning.cpp           |   0
+ .../week3}/examples/member05_baseline.cpp          |   0
+ .../week3}/examples/member06_cost.cpp              |   0
+ .../week3}/examples/member07_soft_threshold.cpp    |   0
+ .../week3}/examples/week3_demo.cpp                 |   0
+ .../week3}/include/lasso/lasso_regression.hpp      |  88 [32m++[m[31m---[m
+ .../week3}/include/lasso/week2.hpp                 |   0
+ .../week3}/include/lasso/week3.hpp                 |  76 [32m++[m[31m---[m
+ .../week3}/reports/individual/member-01.md         |   0
+ .../week3}/reports/individual/member-02.md         |   0
+ .../week3}/reports/individual/member-03.md         |   0
+ .../week3}/reports/individual/member-04.md         |   0
+ .../week3}/reports/individual/member-05.md         |   0
+ .../week3}/reports/individual/member-06.md         |   0
+ .../week3}/reports/individual/member-07.md         |   0
+ .../week3}/reports/individual/member-08.md         |   0
+ .../week3}/reports/individual/member-09.md         |   0
+ .../week3}/reports/individual/member-10.md         |   0
+ .../week3}/reports/technical-report.md             |   0
+ .../week3}/src/lasso_regression.cpp                | 370 [32m++++++++++[m[31m-----------[m
+ {week3 => old format/week3}/src/member01_data.cpp  |   0
+ .../week3}/src/member02_preprocessing.cpp          |   0
+ .../week3}/src/member03_scaling.cpp                |   0
+ .../week3}/src/member04_matrix.cpp                 |   0
+ {week3 => old format/week3}/src/member06_cost.cpp  |   0
+ .../week3}/src/member07_soft_threshold.cpp         |   0
+ .../week3}/src/member08-coordinate.cpp             |   0
+ .../week3}/src/member08_coordinate.cpp             |   0
+ .../week3}/src/member09_evaluation.cpp             |   0
+ {week3 => old format/week3}/tests/test_week2.cpp   |  50 [32m+[m[31m--[m
+ {week3 => old format/week3}/tests/test_week3.cpp   |   0
+ .../week4}/data/input/member01_training.csv        |   0
+ .../week4/data/input/member01_week3_training.csv   |  18 [32m+[m[31m-[m
+ .../week4}/docs/diagrams/input-process-output.mmd  |   0
+ .../week4}/docs/diagrams/main-flow.mmd             |   0
+ .../week4}/docs/diagrams/sequence-diagram.mmd      |   0
+ .../week4}/docs/figures/lasso_workflow_colored.png | Bin
+ .../figures/real_life_technology_applications.png  | Bin
+ .../week4}/examples/linear_regression_demo.cpp     |   0
+ .../week4}/examples/member05_baseline.cpp          |   0
+ .../week4}/examples/member07_soft_thresholding.cpp |   0
+ .../week4}/examples/member08_tuning.cpp            |   0
+ .../week4}/examples/week2_demo.cpp                 |   0
+ .../week4}/examples/week3_demo.cpp                 |   0
+ .../week4}/include/lasso/lasso_regression.hpp      |   0
+ .../week4}/include/lasso/week3.hpp                 |   0
+ .../week4}/include/linreg/linear_regression.hpp    |   0
+ .../week4}/reports/ai-use-declaration-member-10.md |   0
+ .../reports/build-and-test-results-member-10.txt   |   0
+ .../week4}/reports/final-report-member-10.md       |   0
+ .../week4}/reports/individual/member-01.md         |   0
+ .../week4}/reports/individual/member-02.md         |   0
+ .../week4}/reports/individual/member-04.md         |   0
+ .../week4}/reports/individual/member-05.md         |   0
+ .../week4}/reports/individual/member-06.md         |  64 [32m++[m[31m--[m
+ .../week4}/reports/individual/member-07.md         |   0
+ .../week4}/reports/individual/member-08.md         |   0
+ .../week4}/reports/individual/member-09.md         |   0
+ .../week4}/reports/individual/member-10.md         |   0
+ {week4 => old format/week4}/reports/member-06.md   |   0
+ .../week4}/reports/week-02-member-05.md            |   0
+ .../week4}/reports/week-04-member-10.md            |   0
+ {week4 => old format/week4}/reports/week3.md       |   0
+ .../week4}/src/lasso_regression.cpp                |   0
+ .../week4}/src/linear_regression.cpp               |   0
+ {week4 => old format/week4}/src/member01_data.cpp  |   0
+ .../week4}/src/member02_preprocessing.cpp          |   0
+ .../week4}/src/member04_matrix.cpp                 |   0
+ {week4 => old format/week4}/src/member06_cost.cpp  |   0
+ .../week4}/src/member07_soft_thresholding.cpp      |   0
+ .../week4}/src/member08_coordinate.cpp             |   0
+ .../week4}/src/member09_evaluation.cpp             |   0
+ .../week4}/src/member10_cross_validation.cpp       |   0
+ {week4 => old format/week4}/test/test_week2.cpp    |   0
+ {week4 => old format/week4}/test/test_week4.cpp    |   0
+ .../week4}/tests/test_linear_regression.cpp        |   0
+ {week4 => old format/week4}/tests/test_week3.cpp   |   0
+ .../week5}/cmake/Group14RegressionConfig.cmake.in  |   0
+ {week5 => old format/week5}/data/input/sample.csv  |   0
+ .../week5}/docs/diagrams/class-diagram.mmd         |   0
+ .../week5}/docs/diagrams/input-process-output.mmd  |   0
+ .../week5}/docs/diagrams/main-flow.mmd             |   0
+ .../week5}/docs/diagrams/sequence-diagram.mmd      |   0
+ .../week5}/docs/diagrams/system-architecture.mmd   |   0
+ .../week5}/docs/diagrams/week5-template-uml.mmd    |   0
+ .../week5}/docs/figures/lasso_fit_illustration.png | Bin
+ .../week5}/docs/figures/lasso_workflow_colored.png | Bin
+ .../figures/member10-contribution-flowchart.png    | Bin
+ .../figures/real_life_technology_applications.png  | Bin
+ .../week5}/docs/figures/week3_class_layouts.jpg    | Bin
+ .../docs/figures/week3_oop_relationships.jpg       | Bin
+ .../figures/week4_cross_validation_workflow.png    | Bin
+ .../week5}/docs/figures/week5-template-uml.jpg     | Bin
+ .../week5}/docs/render_week5_uml.py                |   0
+ .../week5}/docs/template-design.md                 |   0
+ .../week5}/examples/linear_regression_demo.cpp     |   0
+ .../week5}/examples/load_csv_demo.cpp              |   0
+ .../week5}/examples/member05_baseline.cpp          |   0
+ .../week5}/examples/member06_cost.cpp              |   0
+ .../week5}/examples/member07_soft_threshold.cpp    |   0
+ .../week5}/examples/member08_tuning.cpp            |   0
+ .../week5}/examples/week2_demo.cpp                 |   0
+ .../week5}/examples/week3_demo.cpp                 |   0
+ .../week5}/examples/week4_demo.cpp                 |   0
+ .../week5}/examples/week5_demo.cpp                 |   0
+ .../week5}/reports/individual/member-02.md         |   0
+ .../week5}/reports/individual/member-06.md         |   0
+ .../week5}/reports/individual/member-07.md         |  72 [32m++[m[31m--[m
+ .../week5}/reports/individual/member-09.md         |   0
+ .../week5}/reports/individual/member-10.md         | 232 [32m++++++[m[31m-------[m
+ .../individual/uml-member2-preprocessing.jpeg      | Bin
+ .../week5}/reports/week-02-member-05.md            |   0
+ .../week5}/reports/weekly-reports/week5.md         |   0
+ week5/README.md => reports/Final Weekly Report.md  |   0
+ README.md => reports/General report.md             |   0
+ reports/debug report.md                            |   0
+ week1/README.md => reports/week-01.md              |   0
+ week2/README.md => reports/week-02.md              |   0
+ week3/README.md => reports/week-03.md              |   0
+ week4/README.md => reports/week-04.md              |   0
+ {week5/src => src}/lasso_regression.cpp            |   0
+ {week5/src => src}/linear_regression.cpp           |   0
+ {week5/src => src}/member01_data.cpp               |   0
+ {week5/src => src}/member02_preprocessing.cpp      |   0
+ {week5/src => src}/member03_scaling.cpp            |   0
+ {week5/src => src}/member04_matrix.cpp             |   0
+ {week5/src => src}/member06_cost.cpp               |   0
+ .../src => src}/member07_soft_threshold copy.cpp   |   0
+ {week5/src => src}/member07_soft_threshold.cpp     |   0
+ {week5/src => src}/member08_coordinate.cpp         |   0
+ {week5/src => src}/member09_evaluation.cpp         |   0
+ {week5/src => src}/member10_cross_validation.cpp   |   0
+ {week5/tests => tests}/test_linear_regression.cpp  |   0
+ {week5/tests => tests}/test_templates.cpp          |   0
+ {week5/tests => tests}/test_week2.cpp              |   0
+ {week5/tests => tests}/test_week3.cpp              |   0
+ {week5/tests => tests}/test_week4.cpp              |   0
+ week5/.gitignore                                   |  17 [31m-[m
+ 196 files changed, 640 insertions(+), 723 deletions(-)
