@@ -1,5 +1,5 @@
 # Group-14-Submissions
-# LASSO Regression From Scratch in C++ — Final Project
+# LASSO Regression From Scratch in C++  Final Project
 
 **Group:** Group 14
 **Project:** LASSO Regression in C++, built from scratch
